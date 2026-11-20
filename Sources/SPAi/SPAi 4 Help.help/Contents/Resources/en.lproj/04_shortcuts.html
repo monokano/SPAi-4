@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Shortcuts">
+<title>Shortcuts</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">SPAi 4 Help</a> › Shortcuts</p>
+<h1>Shortcuts</h1>
+
+<p>In the script panel, assign a shortcut (a key combination) to a script you use often, and you can run it just by pressing the keys. The panel doesn't need to be shown. Assigned shortcuts work only while Illustrator is frontmost.</p>
+
+<h2>Assigning a shortcut</h2>
+<ol class="steps">
+  <li>In the <a href="02_panel.html">script panel</a>, click the right end of the script's row (for rows without a shortcut, a <kbd>⌘</kbd> symbol appears when you move the pointer over the row). You can also Control-click the row and choose "Assign Shortcut…".</li>
+  <li>The screen dims and the recording screen appears in the center. Press the keys you want to assign. The keys you press are only shown as a candidate and are not registered yet. Press other keys to change the candidate.</li>
+  <li>Click "Register" or press <kbd>Return</kbd> to register the shortcut.</li>
+</ol>
+<p>To cancel, click "Cancel," press <kbd>Esc</kbd>, or click the dimmed area. Press <kbd>Delete</kbd> to clear the candidate. To remove an existing shortcut, click "Remove."</p>
+<p>The recording screen lists the shortcuts already assigned to other scripts, in key order. Use it to find keys that are still free.</p>
+
+<h2>Keys you can assign</h2>
+<ul>
+  <li>Include at least one of <kbd>⌘</kbd>, <kbd>⌥</kbd>, or <kbd>⌃</kbd>. Keys with <kbd>⇧</kbd> alone or with no modifier keys can't be assigned. However, <kbd>F1</kbd>–<kbd>F20</kbd> can be assigned on their own.</li>
+  <li>Keys used by built-in shortcuts (by default <kbd>⇧⌘Space</kbd>, <kbd>⌥⇧⌘Space</kbd>, <kbd>⌥V</kbd>, and <kbd>⌥⇧V</kbd>) can't be assigned. You can change the built-in shortcuts under "Built-in Shortcuts" in the Shortcuts tab of <a href="06_settings.html#builtin">Settings</a>.</li>
+  <li>Number keys on the numeric keypad are treated as the same keys as the number keys in the top row (either one runs the same script).</li>
+  <li>If you press keys already assigned to another script, a warning appears and the button changes to "Replace." If you replace it, the shortcut is removed from the other script.</li>
+</ul>
+<div class="warning">
+  <strong>Important</strong>
+  <p>SPAi's shortcuts take priority over Illustrator's keyboard shortcuts. If you assign keys that Illustrator uses, the Illustrator shortcut stops working (it works again once you remove the SPAi shortcut).</p>
+  <p>On the other hand, macOS keyboard shortcuts (such as Spotlight and screenshots) take priority over SPAi's shortcuts. If you assign keys that macOS uses, the macOS feature runs and the SPAi shortcut doesn't work. Assign different keys instead. To check the macOS shortcuts, click Keyboard Shortcuts… in System Settings › Keyboard.</p>
+</div>
+
+<h2>Renaming, moving, or deleting files</h2>
+<ul>
+  <li>If you rename a script or move it to another location, its shortcut follows it.</li>
+  <li>An alias and its original file can have separate shortcuts. The recording screen tells you about shortcuts already assigned to an alias of the same file (or to the original file).</li>
+  <li>If you move a script to the Trash, delete it, or disconnect the disk it is on, its shortcut stops working. The assignment is kept, and the shortcut works again when the file returns to its original location.</li>
+</ul>
+<p>Shortcuts whose files can't be found appear dimmed with ⚠ in the panel's list of scripts that have shortcuts (the <kbd>⌘</kbd> button at the top of the panel). If you no longer need one, remove it with "Remove Shortcut" in the shortcut menu.</p>
+
+<h2>Moving shortcuts to another Mac</h2>
+<p>You can export your shortcuts to a file and import them on another Mac. Use "Export…" and "Import…" under "Script Shortcuts" in the Shortcuts tab of <a href="06_settings.html">Settings</a>.</p>
+<ul>
+  <li>The exported file records each script by the name of its registered folder and its location within that folder. On the Mac you import to, place the scripts in a registered folder with the same name and the same structure.</li>
+  <li>When you import, a confirmation screen shows each script as "Ready" (✓), "Conflicts" (⚠, with a colored band on the row), or "Not Found" (?).</li>
+  <li>Only the scripts whose checkbox at the left of the row is selected are imported. All checkboxes are selected at first (rows marked "Not Found" can't be selected).</li>
+  <li>"Conflicts" means the keys are already assigned to another script on the Mac you are importing to. If you import with the checkbox selected, the shortcut is overwritten and removed from the other script. To keep the current shortcut, deselect the checkbox.</li>
+  <li>Turn on "Delete all current shortcuts before importing" to remove all current shortcuts before importing.</li>
+</ul>
+
+<h2>Moving shortcuts from SPAi 3</h2>
+<p>If you used the previous SPAi (version 3) on this Mac, "Import from SPAi 3…" appears under "Script Shortcuts" in the Shortcuts tab of <a href="06_settings.html">Settings</a>. Click it to import the script shortcuts you assigned in SPAi 3.</p>
+<p>SPAi 3 settings are stored here:</p>
+<p><code>~/Library/Application Support/monokano/SPAi/Shortcut.setting</code></p>
+<p>To move them to a new Mac that hasn't used SPAi 3, copy this file from the old Mac to the same location, and "Import from SPAi 3…" appears.</p>
+<ul>
+  <li>The confirmation screen is the same as for "Import…". Only scripts inside your registered folders are "Ready"; scripts that were deleted (including ones replaced by another file with the same name) or are outside your registered folders are "Not Found." Scripts you renamed or moved to another folder after using SPAi 3 are still found if they are inside a registered folder.</li>
+  <li>Shortcuts that were turned off (unchecked) in SPAi 3, and keys that SPAi 4 can't assign (see "Keys you can assign" above), are not imported.</li>
+  <li>Shortcuts such as "Show/Hide Script Panel" in SPAi 3 are not imported.</li>
+</ul>
+</body>
+</html>

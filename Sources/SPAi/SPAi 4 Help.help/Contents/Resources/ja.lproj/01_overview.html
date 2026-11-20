@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="SPAiについて">
+<title>SPAiについて</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">SPAi 4 ヘルプ</a> › SPAiについて</p>
+<h1>SPAiについて</h1>
+
+<h2>何をするアプリか</h2>
+<p>SPAi（Script Panel Ai）は、Adobe Illustratorのスクリプトを実行するためのスクリプトパネルです。登録したフォルダ内のスクリプトを階層のままパネルに表示し、ダブルクリックで実行します。</p>
+<p>SPAiはIllustratorの中に組み込むパネル（エクステンションやプラグイン）ではなく、<strong>Illustratorとは別に動く独立したアプリ</strong>です。Illustratorの「ウィンドウ」メニューには表示されません。SPAiを起動しておくと、Illustratorを使っているときにパネルやショートカットが働きます。</p>
+
+<h2>スクリプトを実行する</h2>
+<p>基本はスクリプトパネルです。パネルと併せて、ショートカットと検索パレットも使えます。</p>
+<dl>
+  <dt>スクリプトパネル</dt>
+  <dd>一覧からスクリプトを選び、ダブルクリックで実行します。詳しくは<a href="02_panel.html">スクリプトパネル</a>をご覧ください。</dd>
+
+  <dt>個別のショートカット</dt>
+  <dd>よく使うスクリプトには、パネルからキーを割り当てられます。割り当てておくと、パネルを表示していなくても、キーを押すだけで実行できます。詳しくは<a href="04_shortcuts.html">ショートカット</a>をご覧ください。</dd>
+
+  <dt>検索パレット</dt>
+  <dd>スクリプトが多くてパネルの一覧から探しにくいときは、名前を入力して検索し、<kbd>Return</kbd> で実行します。キーボードだけで操作できます。詳しくは<a href="03_search.html">検索パレット</a>をご覧ください。</dd>
+</dl>
+
+<h2>動作の条件</h2>
+<p>SPAiのショートカットは、<strong>Illustratorが最前面のときだけ</strong>有効です。Illustrator以外のアプリを操作している間はショートカットが働かず、ふだんのキー操作を妨げません。Illustratorが最前面でないとき、メニューバーのアイコンは淡く表示されます。</p>
+<p>スクリプトは、<strong>直近に最前面だったIllustrator</strong>に送られます。複数のバージョン（Betaを含む）を同時に起動していても、作業中のバージョンで実行されます。送信先はスクリプトパネルの上部に表示されます。</p>
+<p>スクリプトが成功したときは何も表示せず、失敗したときだけダイアログで知らせます。</p>
+<div class="note">
+  <strong>注意</strong>
+  SPAiがIllustratorを操作するには、オートメーション（Apple Events）の許可が必要です。詳しくは<a href="07_permission.html">権限とトラブルシューティング</a>をご覧ください。
+</div>
+
+<h2>常駐とメニュー</h2>
+<p>SPAiはメニューバーやDockに常駐します。メニューバーのアイコン、またはDockアイコンのメニューには、次の項目があります。</p>
+<dl>
+  <dt>パネルを表示／パネルを隠す</dt>
+  <dd>スクリプトパネルの表示を切り替えます。メニューからは、Illustrator以外のアプリを使っているときでもパネルを開けます。</dd>
+  <dt>スクリプトを検索…</dt>
+  <dd>検索パレットを開きます。IllustratorかSPAiが最前面でないときは選べません。</dd>
+  <dt>設定…</dt>
+  <dd><a href="06_settings.html">設定ウインドウ</a>を開きます。</dd>
+  <dt>ヘルプ</dt>
+  <dd>このヘルプを表示します。</dd>
+</dl>
+<p>メニューバーに表示するかDockに表示するかは、<a href="06_settings.html">設定</a>の「表示モード」で選べます。</p>
+</body>
+</html>

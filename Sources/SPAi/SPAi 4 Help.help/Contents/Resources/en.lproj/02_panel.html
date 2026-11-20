@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Script Panel">
+<title>Script Panel</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">SPAi 4 Help</a> › Script Panel</p>
+<h1>Script Panel</h1>
+
+<p>The script panel is the main window of SPAi. It lists the scripts in your registered folders so you can choose and run them with the mouse. You also assign shortcuts from this panel.</p>
+
+<h2>Showing and hiding the panel</h2>
+<ul>
+  <li>Press <kbd>⌥⇧⌘Space</kbd> to show or hide the panel. This key works only while Illustrator is frontmost. You can change the key under "Built-in Shortcuts" in the Shortcuts tab of <a href="06_settings.html#builtin">Settings</a>.</li>
+  <li>You can also choose "Show Panel" / "Hide Panel" from the menu.</li>
+  <li>You can also close the panel with the close button.</li>
+  <li>The panel's position and size are remembered, and it appears in the same place the next time you open it.</li>
+</ul>
+<p>When "Show Panel Only When Illustrator Is Frontmost" is on in Settings (the default), the panel hides automatically when you switch to another app and reappears when you return to Illustrator.</p>
+<div class="note">
+  <strong>Note</strong>
+  The panel never takes keyboard input. Illustrator's keyboard shortcuts keep working while the panel is shown.
+</div>
+
+<h2>Target Illustrator</h2>
+<p>The top of the panel shows the version of Illustrator that runs scripts (the most recently frontmost Illustrator). When Illustrator is not running, it shows "Illustrator Not Running."</p>
+
+<h2>Buttons at the top of the panel</h2>
+<p>The right side of the top of the panel has three buttons, from left to right:</p>
+<dl>
+  <dt>Magnifying glass</dt>
+  <dd>Opens the <a href="03_search.html">search palette</a>. Use it to find a script by name and run it.</dd>
+  <dt>Gear</dt>
+  <dd>Opens the <a href="06_settings.html">Settings</a> window.</dd>
+  <dt><kbd>⌘</kbd></dt>
+  <dd>Lists <strong>only the scripts that have shortcuts</strong>. Click it again to return to the normal list. You can run scripts from this list the same way as from the normal list.<br>
+  By default, this list is sorted by shortcut, which makes it easy to find unused keys. You can sort it by name instead in <a href="06_settings.html">Settings</a>.</dd>
+</dl>
+
+<h2>Running scripts</h2>
+<p><strong>Double-click</strong> a script to run it. The panel stays open after running, so you can go on to run another script.</p>
+<p>If you set "Run Scripts" to "Single-Click" in Settings, clicking a row runs it. See <a href="06_settings.html">Settings</a>.</p>
+<ul>
+  <li>To deselect a row, hold down <kbd>⌘</kbd> and click the selected row, or click an empty area of the list.</li>
+  <li>Aliases show a small arrow at the lower left of the icon.</li>
+  <li>If a folder contains scripts with the same name but different extensions, the extension is shown dimmed after the name.</li>
+</ul>
+
+<h2>Opening and closing folders</h2>
+<p>Scripts are shown per registered folder, keeping the subfolder hierarchy.</p>
+<ul>
+  <li>Click a folder row to open or close it.</li>
+  <li>Option-click (<kbd>⌥</kbd>) to open or close all of its subfolders as well.</li>
+  <li>Which folders are open is remembered.</li>
+</ul>
+
+<h2>Showing and assigning shortcuts</h2>
+<p>Scripts with an assigned shortcut show the keys at the right end of the row. Click the keys to change the shortcut. For rows without a shortcut, a <kbd>⌘</kbd> symbol appears when you move the pointer over the row; click it to assign one. See <a href="04_shortcuts.html">Shortcuts</a>.</p>
+<h2>Shortcut menu</h2>
+<dl>
+  <dt>Run</dt>
+  <dd>Runs the script.</dd>
+  <dt>Edit</dt>
+  <dd>Opens the script in the same app as double-clicking it in the Finder. Not available for apps (.app).</dd>
+  <dt>Assign Shortcut… / Change Shortcut…</dt>
+  <dd>Opens the shortcut recording screen.</dd>
+  <dt>Remove Shortcut</dt>
+  <dd>Removes the assigned shortcut.</dd>
+  <dt>Reveal in Finder</dt>
+  <dd>Shows the script or folder in the Finder.</dd>
+</dl>
+
+<h2>Collapsing the panel</h2>
+<p>Double-click an empty part of the top row of the panel (the row that shows the target Illustrator) to collapse the panel and hide the list. Double-click again to restore its height. The panel stays collapsed even after you quit SPAi.</p>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Settings">
+<title>Settings</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">SPAi 4 Help</a> › Settings</p>
+<h1>Settings</h1>
+
+<p>Choose "Settings…" from the menu bar icon or the Dock icon's menu, or click the gear button at the top of the panel, to open the Settings window. The Settings window has four tabs: General, Folders, Panel, and Shortcuts.</p>
+
+<h2>General</h2>
+
+<h3>Display Mode</h3>
+<p>Choose where SPAi appears: "Menu Bar Only," "Dock Only," or "Menu Bar and Dock."</p>
+<p>On a Mac whose built-in display has a notch, "Menu Bar Only" is unavailable, because the menu bar icon can be hidden behind the notch and become impossible to use.</p>
+<div class="note">
+  <strong>Tip</strong>
+  If you can no longer see the menu bar icon, hold down the <kbd>⌘</kbd> (Command) key while opening SPAi to reset the display mode to the default (Menu Bar and Dock).
+</div>
+
+<h3>Launch at Login</h3>
+<p>Opens SPAi automatically when you log in to your Mac.</p>
+
+<h2>Folders</h2>
+
+<h3>Registered Folders</h3>
+<p>The folders whose scripts SPAi lists. See <a href="05_scripts.html">Scripts and Registered Folders</a>.</p>
+<dl>
+  <dt>+ button</dt>
+  <dd>Choose folders to register. You can also drag folders from the Finder to the list; they're added where you drop them.</dd>
+  <dt>− button</dt>
+  <dd>Removes the selected folder from the list. The folder itself is not deleted.</dd>
+  <dt>Reveal in Finder button</dt>
+  <dd>At the right end of each row. Shows that row's folder in the Finder.</dd>
+  <dt>Checkbox</dt>
+  <dd>Folders that are checked appear in the panel and search palette. Even when unchecked, shortcuts assigned to scripts in the folder keep working.</dd>
+  <dt>Order</dt>
+  <dd>Drag rows to reorder them. The panel shows registered folders in this order.</dd>
+</dl>
+
+<h2>Panel</h2>
+<dl>
+  <dt>Show Panel Only When Illustrator Is Frontmost</dt>
+  <dd>When this is on (the default), the script panel hides automatically when you switch to another app and reappears when you return to Illustrator. When it is off, the panel stays visible while you use other apps.</dd>
+  <dt>List Text Size</dt>
+  <dd>Choose the text size of the script panel's list: "Extra Small," "Small," "Medium," or "Large" (the default is "Medium").</dd>
+  <dt>Run Scripts</dt>
+  <dd>Choose how to run a script in the script panel: "Double-Click" or "Single-Click" (the default is "Double-Click"). With "Single-Click," clicking a script selects and runs it; double-clicking runs it only once. The search palette works the same either way.</dd>
+  <dt>Sort Shortcut List by Key</dt>
+  <dd>Sorts the script panel's list of scripts that have shortcuts by shortcut (1, 2 … A, B …; shortcuts with the same key are sorted by modifier keys). This is on by default. When it is off, the list is sorted by name. See <a href="02_panel.html">Script Panel</a>.</dd>
+</dl>
+
+<h2>Shortcuts</h2>
+
+<h3 id="builtin">Built-in Shortcuts</h3>
+<p>Change the shortcuts for the features built into SPAi. They all work only while Illustrator is frontmost.</p>
+<dl>
+  <dt>Show Panel (default <kbd>⌥⇧⌘Space</kbd>)</dt>
+  <dd>Shows or hides the script panel.</dd>
+  <dt>Search Scripts… (default <kbd>⇧⌘Space</kbd>)</dt>
+  <dd>Opens the search palette.</dd>
+  <dt>Clean Paste (default <kbd>⌥V</kbd>)</dt>
+  <dd>Pastes the clipboard as plain text (see below).</dd>
+  <dt>Clean Paste (Trim) (default <kbd>⌥⇧V</kbd>)</dt>
+  <dd>Same as Clean Paste, and also removes spaces and line breaks at the beginning and end of the clipboard text.</dd>
+</dl>
+<ul>
+  <li>To change a key, click the shortcut field, then press the new keys. The keys you press are registered right away. To cancel, press <kbd>Esc</kbd> or click somewhere else.</li>
+  <li>To stop using a shortcut, click ✕ on the right (or click the field and press <kbd>Delete</kbd>).</li>
+  <li>The keys you can use are the same as for <a href="04_shortcuts.html">script shortcuts</a>.</li>
+  <li>If you press a key that is already used by another built-in shortcut or a script, a warning appears. Click "Replace" to remove the shortcut from the other one.</li>
+  <li>Click "Restore Defaults" to set all four back to their default keys. If a default key is assigned to a script, a confirmation appears; restoring removes the shortcut from that script.</li>
+</ul>
+
+<h3>Clean Paste</h3>
+<p>Pastes the clipboard text as plain text, without formatting, into the text you are editing in Illustrator (when characters are selected or the cursor is placed with the Type tool). Selected characters are replaced.</p>
+<ul>
+  <li>Combining characters, such as Japanese voiced sound marks, are composed where possible before pasting. Compatibility ideographs and similar characters are protected so they don't change into other characters.</li>
+  <li>Line breaks are converted to Illustrator paragraph breaks.</li>
+  <li>If characters that can't be composed remain (combining characters that can't be composed, private use characters, flag emoji, or skin tone modifiers), a warning appears. Click "Check" to open a window where you can find those characters one by one with "Next." Click "Paste" to paste anyway.</li>
+  <li>Nothing happens when no document is open or you are not editing text.</li>
+</ul>
+
+<h3>Script Shortcuts</h3>
+<p>Export your assigned shortcuts to a file, or import them. Use these to move your shortcuts from another Mac or from SPAi 3. See <a href="04_shortcuts.html">Shortcuts</a>.</p>
+</body>
+</html>

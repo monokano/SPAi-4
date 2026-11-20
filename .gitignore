@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Xcode（ユーザーごとの状態）
+xcuserdata/
+*.xcuserstate
+
+# ビルド生成物
+build/
+DerivedData/
+*.xcarchive
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager
+.build/
+.swiftpm/

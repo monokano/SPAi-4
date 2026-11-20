@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Scripts and Registered Folders">
+<title>Scripts and Registered Folders</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">SPAi 4 Help</a> › Scripts and Registered Folders</p>
+<h1>Scripts and Registered Folders</h1>
+
+<h2>Files SPAi can run</h2>
+<dl>
+  <dt>ExtendScript (.jsx, .js)</dt>
+  <dd>Illustrator scripts. They run in the most recently frontmost Illustrator.</dd>
+
+  <dt>AppleScript (.scpt, .applescript, .scptd)</dt>
+  <dd>Run as AppleScript.</dd>
+
+  <dt>Applications (.app)</dt>
+  <dd>Opens the application. Applets made with AppleScript can also be run. An application that is already running only comes to the front and does not run again (this is how macOS works).</dd>
+</dl>
+<div class="warning">
+  <strong>Important</strong>
+  For AppleScript and applets, SPAi can't choose which Illustrator runs the script. When more than one Illustrator (including Beta) is running, the script may run in a version you didn't intend, so SPAi asks for confirmation before running it. Turn on "Don’t show this again until SPAi quits" to skip the confirmation until you quit SPAi.
+</div>
+
+<h2>Registered folders</h2>
+<p>To run scripts with SPAi, you need to register the folders that contain them. You can add and remove registered folders in <a href="06_settings.html">Settings</a>, and you can register more than one. When you first open SPAi, the "SPAi 4 Scripts" folder in your Documents folder is registered.</p>
+<ul>
+  <li>All subfolders of a registered folder are included in the list.</li>
+  <li>Adding, deleting, and renaming scripts is reflected in the list automatically.</li>
+  <li>You can change the order of registered folders, and whether each one appears in the panel, in Settings. Within each folder, items are sorted by name.</li>
+  <li>Even when a registered folder is hidden from the panel, shortcuts assigned to its scripts keep working.</li>
+</ul>
+
+<h3>What doesn't appear in the list</h3>
+<ul>
+  <li>Files of types other than those above.</li>
+  <li>The contents of hidden folders (folders whose names begin with ".") and "node_modules" folders.</li>
+  <li>The contents of folders that a folder alias (or symbolic link) points to. To list the scripts in such a folder, add that folder itself as a registered folder.</li>
+</ul>
+<p>Aliases of scripts (files) do appear in the list and run the same way as the original files.</p>
+
+<h3>Registered folders on a server</h3>
+<p>You can also register shared folders on a server. Scripts added or changed on the server from another Mac appear in the list when you open the panel or search palette, or when Illustrator comes back to the front.</p>
+
+<h3>Registered folders that can't be found</h3>
+<p>If you delete a registered folder, move it to the Trash, or disconnect its disk, the list in Settings shows ⚠ and its status ("Trash," "Not Connected," or "Deleted") at the right end of the row. When you put it back from the Trash or reconnect the disk, it appears in the panel's list again.</p>
+</body>
+</html>

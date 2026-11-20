@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Permissions and Troubleshooting">
+<title>Permissions and Troubleshooting</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">SPAi 4 Help</a> › Permissions and Troubleshooting</p>
+<h1>Permissions and Troubleshooting</h1>
+
+<h2>Automation (Apple Events) permission</h2>
+<p>To run scripts in Illustrator, SPAi needs Automation (Apple Events) permission. The first time you run a script, a dialog asks for permission; choose "Allow."</p>
+<p>If you don't allow it, a dialog tells you that the script failed to run. Click "Open System Settings" to open System Settings › Privacy &amp; Security › Automation, and turn on the Illustrator item under SPAi.</p>
+<div class="note">
+  <strong>Note</strong>
+  SPAi does not require Accessibility permission.
+</div>
+
+<h2>Dialogs that report failures</h2>
+<p>When a script succeeds, nothing is shown. SPAi shows a dialog only in these cases:</p>
+<ul>
+  <li>The script ended with an error. The dialog shows the error returned by Illustrator. However, "Error 1302: No such element" isn't reported when no document is open, because Illustrator doesn't show anything in that case either when you run the script directly.</li>
+  <li>The script couldn't be sent to Illustrator, or the application couldn't be opened.</li>
+  <li>The script wasn't run because the previous script was still running. Run it again after the previous script finishes.</li>
+</ul>
+
+<h2>When things don't work</h2>
+<dl>
+  <dt>No shortcuts work at all</dt>
+  <dd>Check that Illustrator is frontmost. SPAi's shortcuts work only while Illustrator is frontmost.</dd>
+
+  <dt>Scripts don't run</dt>
+  <dd>Check the Automation permission (above). If the top of the panel shows "Illustrator Not Running," open Illustrator.</dd>
+
+  <dt>A script doesn't appear in the list</dt>
+  <dd>Check that the file type is supported, that it isn't inside a hidden folder or a "node_modules" folder, and that the registered folder's checkbox is on in Settings. See <a href="05_scripts.html">Scripts and Registered Folders</a>.</dd>
+
+  <dt>An assigned shortcut doesn't work</dt>
+  <dd>In the panel's list of scripts that have shortcuts (the <kbd>⌘</kbd> button at the top of the panel), check whether the script appears dimmed with ⚠. Shortcuts whose files can't be found don't work. Also, keys that are used by a macOS keyboard shortcut don't work, because macOS takes priority. See <a href="04_shortcuts.html">Shortcuts</a>.</dd>
+
+  <dt>A script ran in the wrong version of Illustrator</dt>
+  <dd>For AppleScript and applets, SPAi can't choose which Illustrator runs the script. When several versions are running, quit the versions you aren't using before running the script.</dd>
+
+  <dt>The menu bar icon is missing</dt>
+  <dd>The display mode may be set to "Dock Only," or the icon may be hidden behind the notch. Hold down <kbd>⌘</kbd> while opening SPAi to reset the display mode to the default (Menu Bar and Dock).</dd>
+</dl>
+</body>
+</html>

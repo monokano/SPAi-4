@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Search Palette">
+<title>Search Palette</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">SPAi 4 Help</a> › Search Palette</p>
+<h1>Search Palette</h1>
+
+<p>The search palette is a window for finding scripts by name and running them. Use it when you have so many scripts that one is hard to find in the <a href="02_panel.html">script panel</a>'s list. You can do everything from the keyboard.</p>
+
+<h2>How to use it</h2>
+<ol class="steps">
+  <li>Press <kbd>⇧⌘Space</kbd>, or choose "Search Scripts…" from the menu. You can also click the magnifying glass button at the top of the <a href="02_panel.html">script panel</a>. The palette opens, ready for you to type in the search field.</li>
+  <li>Type part of a script's name. The results narrow as you type.</li>
+  <li>Choose a result with <kbd>↑</kbd> <kbd>↓</kbd> and press <kbd>Return</kbd> to run it. The palette closes when the script runs.</li>
+</ol>
+<p>You can also double-click a result to run it. To close without running anything, press <kbd>Esc</kbd>, click outside the palette, or press <kbd>⇧⌘Space</kbd> again.</p>
+<p><kbd>⇧⌘Space</kbd> and the "Search Scripts…" menu item work only while Illustrator or SPAi is frontmost. You can change the key under "Built-in Shortcuts" in the Shortcuts tab of <a href="06_settings.html#builtin">Settings</a>.</p>
+
+<h2>How searching works</h2>
+<ul>
+  <li>A script matches if the characters you type appear in its name in the same order, even with other characters in between (fuzzy matching). For example, "ssm" finds "select_same.jsx".</li>
+  <li>Uppercase and lowercase are treated the same. For Japanese text, full-width and half-width characters, and hiragana and katakana, are also treated the same.</li>
+  <li>Scripts are also found by the name of the folder that contains them.</li>
+  <li>When the search field is empty, all scripts are listed with the most recently used first. To run the script you used last, just open the palette and press <kbd>Return</kbd>.</li>
+</ul>
+<div class="note">
+  <strong>Note</strong>
+  While text is still being composed in an input method such as Japanese, <kbd>Return</kbd>, <kbd>↑</kbd> <kbd>↓</kbd>, and <kbd>Esc</kbd> act on the input method. A script runs only when you press <kbd>Return</kbd> after confirming the text.
+</div>
+
+<h2>Position and size</h2>
+<p>You can drag the palette to move it and resize it. Its position and size are remembered, and it appears in the same place the next time you open it.</p>
+</body>
+</html>

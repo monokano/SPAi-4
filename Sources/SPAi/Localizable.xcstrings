@@ -1,0 +1,1464 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "“%@” failed" : {
+      "comment" : "Failure dialog title: a script ended with an error (%@ = script name)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「%@」の実行に失敗しました"
+          }
+        }
+      }
+    },
+    "“%@” was not run" : {
+      "comment" : "Failure dialog title: a script was ignored because another is running (%@ = script name)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「%@」は実行されませんでした"
+          }
+        }
+      }
+    },
+    "“Menu Bar Only” is unavailable because this Mac's built-in display has a notch and the menu bar icon can be hidden behind it." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このMacは内蔵ディスプレイにノッチがあり、メニューバーアイコンがノッチの陰に隠れることがあるため、「メニューバーのみ」は使用できません。"
+          }
+        }
+      }
+    },
+    "%@ is already used by “%@”." : {
+      "comment" : "Settings > Built-in Shortcuts > Restore Defaults: a default key is used by a script (1st %@ = key, 2nd %@ = script name)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ は「%2$@」で使用中です。"
+          }
+        }
+      }
+    },
+    "%@ · %@ (exported from %@)" : {
+      "comment" : "Import sheet subtitle: file name, number of shortcuts, source computer name",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ ・ %2$@（書き出し元：%3$@）"
+          }
+        }
+      }
+    },
+    "%@ is already assigned. Replacing it will remove the shortcut from that script." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ は割当済みです。置き換えると、そちらの割当は解除されます。"
+          }
+        }
+      }
+    },
+    "%@ is already used by “%@”. Replacing it will remove that shortcut." : {
+      "comment" : "Settings > Built-in Shortcuts: conflict warning (1st %@ = key, 2nd %@ = built-in action or script name)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ は「%2$@」で使用中です。置き換えると、そちらのショートカットは解除されます。"
+          }
+        }
+      }
+    },
+    "%@ is used by a built-in shortcut and cannot be assigned" : {
+      "comment" : "Script shortcut recorder: the key is used by a built-in shortcut (%@ = key)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ は組み込みショートカットで使用中のため割り当てられません"
+          }
+        }
+      }
+    },
+    "%lld / %lld scripts" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld / %2$lld 本"
+          }
+        }
+      }
+    },
+    "%lld assigned" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld assigned"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld assigned"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "割当 %lld 本"
+          }
+        }
+      }
+    },
+    "%lld scripts" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld script"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld scripts"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 本"
+          }
+        }
+      }
+    },
+    "%lld shortcuts" : {
+      "comment" : "Import sheet: number of shortcuts in the file",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld shortcut"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld shortcuts"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld件"
+          }
+        }
+      }
+    },
+    "Restore Defaults" : {
+      "comment" : "Settings > Built-in Shortcuts: button that sets all four built-in shortcuts back to their default keys",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デフォルトに戻す"
+          }
+        }
+      }
+    },
+    "Restoring the defaults will remove those shortcuts." : {
+      "comment" : "Settings > Built-in Shortcuts > Restore Defaults: confirmation after the list of scripts that use a default key",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デフォルトに戻すと、そちらのショートカットは解除されます。"
+          }
+        }
+      }
+    },
+    "↑↓ Select   Enter Run   Esc Close" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "↑↓ 選択　Enter 実行　Esc 閉じる"
+          }
+        }
+      }
+    },
+    "Add" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加"
+          }
+        }
+      }
+    },
+    "An alias already has a shortcut." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エイリアスの方に割当済みです。"
+          }
+        }
+      }
+    },
+    "AppleScript can’t choose which Illustrator to send to, so the script may run in a version other than %@." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AppleScriptは送信先のIllustratorを選べないため、%@以外で実行される場合があります。"
+          }
+        }
+      }
+    },
+    "AppleScript can’t choose which Illustrator to send to, so the script may run in a version you didn’t intend." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AppleScriptは送信先のIllustratorを選べないため、意図しないバージョンで実行される場合があります。"
+          }
+        }
+      }
+    },
+    "Assign Shortcut…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカットを登録…"
+          }
+        }
+      }
+    },
+    "Assigned Shortcuts (%lld)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "割当済みのショートカット（%lld件）"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "comment" : "Help window toolbar: go back (accessibility label)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "戻る"
+          }
+        }
+      }
+    },
+    "Built-in Shortcuts" : {
+      "comment" : "Settings window tab",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組み込みショートカット"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        }
+      }
+    },
+    "Change Shortcut…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカットを変更…"
+          }
+        }
+      }
+    },
+    "Check" : {
+      "comment" : "Clean paste alert button: open the checker window",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "確認する"
+          }
+        }
+      }
+    },
+    "Check Uncompositable Character" : {
+      "comment" : "Checker window title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合成できない文字を確認"
+          }
+        }
+      }
+    },
+    "Choose a shortcuts file exported from SPAi." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAiで書き出したショートカットのファイルを選んでください。"
+          }
+        }
+      }
+    },
+    "Clean Paste" : {
+      "comment" : "Built-in shortcut: paste clipboard text as plain, composed text",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クリーンペースト"
+          }
+        }
+      }
+    },
+    "Clean Paste (Trim)" : {
+      "comment" : "Built-in shortcut: clean paste with leading/trailing whitespace removed",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クリーンペースト（トリム）"
+          }
+        }
+      }
+    },
+    "Click “Register” to confirm (press another key to change)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「登録」で確定します（押し直しで変更）"
+          }
+        }
+      }
+    },
+    "Click a shortcut, then press the new keys. Click ✕ to remove it." : {
+      "comment" : "Settings > Built-in Shortcuts: explanation",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカットをクリックしてから、新しいキーを押してください。✕をクリックすると削除します。"
+          }
+        }
+      }
+    },
+    "Conflicts: %lld" : {
+      "comment" : "Import sheet summary: keys already assigned to another script",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重複 %lld"
+          }
+        }
+      }
+    },
+    "Continue Anyway" : {
+      "comment" : "Translocation alert: button to keep running from the temporary location",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このまま続ける"
+          }
+        }
+      }
+    },
+    "Couldn't export shortcuts." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカットを書き出せませんでした。"
+          }
+        }
+      }
+    },
+    "Couldn't read the SPAi 3 shortcut settings." : {
+      "comment" : "Alert: the old version's shortcut settings file couldn't be read",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 3のショートカット設定を読み込めませんでした。"
+          }
+        }
+      }
+    },
+    "Couldn't read this file." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このファイルを読み込めませんでした。"
+          }
+        }
+      }
+    },
+    "Delete all current shortcuts before importing" : {
+      "comment" : "Import sheet: checkbox",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在のショートカット登録を全削除してから読み込む"
+          }
+        }
+      }
+    },
+    "Deleted" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除済み"
+          }
+        }
+      }
+    },
+    "Display Mode" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示モード"
+          }
+        }
+      }
+    },
+    "Display Mode Reset" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示モードをリセットしました"
+          }
+        }
+      }
+    },
+    "Dock Only" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dockのみ"
+          }
+        }
+      }
+    },
+    "Don’t show this again until SPAi quits" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAiを終了するまで表示しない"
+          }
+        }
+      }
+    },
+    "Double-Click" : {
+      "comment" : "Settings: run script files option",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダブルクリック"
+          }
+        }
+      }
+    },
+    "Edit" : {
+      "comment" : "Script panel context menu: open the script file like a double-click in the Finder",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
+          }
+        }
+      }
+    },
+    "Error %@" : {
+      "comment" : "Failure dialog message: Illustrator returned only an error number (%@ = number, e.g. -2700)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラー%@"
+          }
+        }
+      }
+    },
+    "Export…" : {
+      "comment" : "Settings > Shortcuts: export button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "書き出す…"
+          }
+        }
+      }
+    },
+    "Extra Small" : {
+      "comment" : "Settings: list text size option",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "極小"
+          }
+        }
+      }
+    },
+    "Folders" : {
+      "comment" : "Settings window: tab name (registered folders)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フォルダ"
+          }
+        }
+      }
+    },
+    "For security, macOS runs apps obtained from the internet from a copy in a temporary location until you move them in the Finder." : {
+      "comment" : "Translocation alert body, 2nd paragraph (reason)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOSは安全のため、インターネットから入手したアプリをFinderで移動するまでは、元の場所ではなく一時的な場所に置いたコピーから起動します。"
+          }
+        }
+      }
+    },
+    "Forward" : {
+      "comment" : "Help window toolbar: go forward (accessibility label)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "進む"
+          }
+        }
+      }
+    },
+    "General" : {
+      "comment" : "Settings window tab",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一般"
+          }
+        }
+      }
+    },
+    "Help" : {
+      "comment" : "Menu bar / Dock menu: open the help window",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ヘルプ"
+          }
+        }
+      }
+    },
+    "Hide Panel" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パネルを隠す"
+          }
+        }
+      }
+    },
+    "Illustrator Not Running" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustrator 未起動"
+          }
+        }
+      }
+    },
+    "Import %lld" : {
+      "comment" : "Import sheet: confirm button",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Import %lld Shortcut"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Import %lld Shortcuts"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld件を読み込む"
+          }
+        }
+      }
+    },
+    "Import from SPAi 3…" : {
+      "comment" : "Settings: button. Import shortcuts from the old Xojo version (SPAi 3) settings file. Shown only when the file exists",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 3から読み込む…"
+          }
+        }
+      }
+    },
+    "Import Shortcuts" : {
+      "comment" : "Import sheet: title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカットを読み込む"
+          }
+        }
+      }
+    },
+    "Import…" : {
+      "comment" : "Settings > Shortcuts: import button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "読み込む…"
+          }
+        }
+      }
+    },
+    "Include at least one of ⌘ ⌥ ⌃ (F1–F20 may be used alone)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ ⌥ ⌃ のいずれかを含めてください（F1〜F20 は単独可）"
+          }
+        }
+      }
+    },
+    "It is better to avoid characters that cannot be composed." : {
+      "comment" : "Clean paste alert body",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合成できない文字は使用を避けた方がよいでしょう。"
+          }
+        }
+      }
+    },
+    "Large" : {
+      "comment" : "Settings: list text size option",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大"
+          }
+        }
+      }
+    },
+    "Launch at Login" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログイン時に起動"
+          }
+        }
+      }
+    },
+    "List Text Size" : {
+      "comment" : "Settings: panel list text size",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リストの文字サイズ"
+          }
+        }
+      }
+    },
+    "Medium" : {
+      "comment" : "Settings: list text size option",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中"
+          }
+        }
+      }
+    },
+    "Menu Bar and Dock" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メニューバーとDock"
+          }
+        }
+      }
+    },
+    "Menu Bar Only" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メニューバーのみ"
+          }
+        }
+      }
+    },
+    "Move SPAi 4 again in the Finder" : {
+      "comment" : "Translocation alert title (already in the Applications folder)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 4をFinderで移動し直してください"
+          }
+        }
+      }
+    },
+    "Move SPAi 4 to the Applications folder" : {
+      "comment" : "Translocation alert title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 4をアプリケーションフォルダへ移動してください"
+          }
+        }
+      }
+    },
+    "Multiple versions of Illustrator are running" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustratorが複数起動しています"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "comment" : "Checker window: find next",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次へ"
+          }
+        }
+      }
+    },
+    "No matching scripts" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一致するスクリプトがありません"
+          }
+        }
+      }
+    },
+    "No scripts" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリプトがありません"
+          }
+        }
+      }
+    },
+    "No scripts with shortcuts" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカット付きのスクリプトがありません"
+          }
+        }
+      }
+    },
+    "No uncompositable characters were found." : {
+      "comment" : "Checker window: not found",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合成できない文字は見つかりませんでした。"
+          }
+        }
+      }
+    },
+    "None" : {
+      "comment" : "Settings > Built-in Shortcuts: no shortcut assigned",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なし"
+          }
+        }
+      }
+    },
+    "Not Assigned" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未割当"
+          }
+        }
+      }
+    },
+    "Not Connected" : {
+      "comment" : "Settings > Registered Folders: status of a folder on a volume that is not connected (the volume name is in the tooltip)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未接続"
+          }
+        }
+      }
+    },
+    "Not Found: %lld" : {
+      "comment" : "Import sheet summary: scripts not found in registered folders",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "見つからない %lld"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "comment" : "Failure dialog: dismiss button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "Open System Settings" : {
+      "comment" : "Failure dialog button: opens Privacy & Security > Automation",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "システム設定を開く"
+          }
+        }
+      }
+    },
+    "Panel" : {
+      "comment" : "Settings window: tab name (script panel settings)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パネル"
+          }
+        }
+      }
+    },
+    "Paste" : {
+      "comment" : "Clean paste alert button: paste anyway",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペースト"
+          }
+        }
+      }
+    },
+    "Press a key with modifiers (F1–F20 may be used alone)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "修飾キー＋キーを押してください（F1〜F20 は単独可）"
+          }
+        }
+      }
+    },
+    "Quit" : {
+      "comment" : "Translocation alert: default button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了"
+          }
+        }
+      }
+    },
+    "Quit SPAi" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了"
+          }
+        }
+      }
+    },
+    "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again." : {
+      "comment" : "Translocation alert body, 3rd paragraph (original location outside the Applications folder)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 4を終了し、Finderでアプリケーションフォルダへ移動してから、もう一度開いてください。"
+          }
+        }
+      }
+    },
+    "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again. If it's already in the Applications folder, move it to the Desktop and back again in the Finder." : {
+      "comment" : "Translocation alert body, 3rd paragraph (original location unknown)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 4を終了し、Finderでアプリケーションフォルダへ移動してから、もう一度開いてください。すでにアプリケーションフォルダにある場合は、Finderでいったんデスクトップへ移動してから戻してください。"
+          }
+        }
+      }
+    },
+    "Ready: %lld" : {
+      "comment" : "Import sheet summary: shortcuts that can be assigned",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "割当可 %lld"
+          }
+        }
+      }
+    },
+    "Register" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登録"
+          }
+        }
+      }
+    },
+    "Registered Folders" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登録フォルダ"
+          }
+        }
+      }
+    },
+    "Remove" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解除"
+          }
+        }
+      }
+    },
+    "Remove Shortcut" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカットを解除"
+          }
+        }
+      }
+    },
+    "Replace" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "置き換える"
+          }
+        }
+      }
+    },
+    "Reveal in Finder" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finderに表示"
+          }
+        }
+      }
+    },
+    "Run" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "実行"
+          }
+        }
+      }
+    },
+    "Run Scripts" : {
+      "comment" : "Settings: how a click runs a script in the panel",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリプトを実行"
+          }
+        }
+      }
+    },
+    "Sample - Show Version" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サンプル_バージョン表示"
+          }
+        }
+      }
+    },
+    "Script Shortcuts" : {
+      "comment" : "Settings window, Shortcuts tab: heading of the export/import buttons",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登録したショートカット"
+          }
+        }
+      }
+    },
+    "Search Scripts" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリプトを検索"
+          }
+        }
+      }
+    },
+    "Search scripts (fuzzy match)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリプトを検索（あいまい一致）"
+          }
+        }
+      }
+    },
+    "Search Scripts…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリプトを検索…"
+          }
+        }
+      }
+    },
+    "Select script folders to register with SPAi" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi に登録するスクリプトフォルダを選択してください"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        }
+      }
+    },
+    "Settings…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定…"
+          }
+        }
+      }
+    },
+    "Shortcuts" : {
+      "comment" : "Settings: section title for exporting/importing shortcuts",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカット"
+          }
+        }
+      }
+    },
+    "Show Panel" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パネルを表示"
+          }
+        }
+      }
+    },
+    "Show Panel Only When Illustrator Is Frontmost" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustrator が最前面にあるときだけパネルを表示"
+          }
+        }
+      }
+    },
+    "Single-Click" : {
+      "comment" : "Settings: run script files option",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シングルクリック"
+          }
+        }
+      }
+    },
+    "Small" : {
+      "comment" : "Settings: list text size option",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小"
+          }
+        }
+      }
+    },
+    "Some characters cannot be composed." : {
+      "comment" : "Clean paste alert title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペーストする文字に合成できない文字があります。"
+          }
+        }
+      }
+    },
+    "Sort Shortcut List by Key" : {
+      "comment" : "Settings: checkbox. Sort the panel's 'shortcuts only' list by key (off = by name)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカット一覧をキー順に並べる"
+          }
+        }
+      }
+    },
+    "SPAi 4 is in the Applications folder, but it was placed there without being moved in the Finder, for example by unzipping it there. Quit SPAi 4, move it to the Desktop in the Finder, move it back to the Applications folder, and then open it again." : {
+      "comment" : "Translocation alert body, 3rd paragraph (original location inside the Applications folder)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 4はアプリケーションフォルダにありますが、そこでZIPを展開した場合など、Finderで移動せずに置かれています。SPAi 4を終了し、Finderでいったんデスクトップへ移動してからアプリケーションフォルダへ戻し、もう一度開いてください。"
+          }
+        }
+      }
+    },
+    "SPAi 4 is running from a temporary location because it was opened right after being downloaded." : {
+      "comment" : "Translocation alert body, 1st paragraph",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダウンロードした直後のため、SPAi 4は一時的な場所から起動しています。"
+          }
+        }
+      }
+    },
+    "SPAi 4 — Record Shortcut" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 4　ショートカット登録"
+          }
+        }
+      }
+    },
+    "SPAi 4 Help" : {
+      "comment" : "Help menu item and help window title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 4 ヘルプ"
+          }
+        }
+      }
+    },
+    "SPAi isn’t allowed to control %@. Allow SPAi in System Settings > Privacy & Security > Automation." : {
+      "comment" : "Failure dialog message: Automation permission denied (-1743). %@ = app name, e.g. Adobe Illustrator",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAiに%@の操作が許可されていません。「システム設定」>「プライバシーとセキュリティ」>「オートメーション」でSPAiを許可してください。"
+          }
+        }
+      }
+    },
+    "SPAi isn’t allowed to control this app. Allow SPAi in System Settings > Privacy & Security > Automation." : {
+      "comment" : "Failure dialog message: Automation permission denied (-1743)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAiにこのアプリの操作が許可されていません。「システム設定」>「プライバシーとセキュリティ」>「オートメーション」でSPAiを許可してください。"
+          }
+        }
+      }
+    },
+    "SPAi sample" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi サンプル"
+          }
+        }
+      }
+    },
+    "The display mode has been reset to the default (Menu Bar and Dock)." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示モードを初期状態（メニューバーとDock）に戻しました。"
+          }
+        }
+      }
+    },
+    "The original file already has a shortcut." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "元ファイルの方に割当済みです。"
+          }
+        }
+      }
+    },
+    "The previous script is still running. Try again after it finishes." : {
+      "comment" : "Failure dialog message: script ignored while busy",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前のスクリプトの実行中です。終わってからもう一度実行してください。"
+          }
+        }
+      }
+    },
+    "The script ended with an error." : {
+      "comment" : "Failure dialog message: AppleScript failed without an error message",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリプトがエラーで終了しました。"
+          }
+        }
+      }
+    },
+    "There are no characters." : {
+      "comment" : "Checker window: text is empty",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文字がひとつもありません。"
+          }
+        }
+      }
+    },
+    "There are no shortcuts to export." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "書き出すショートカットがありません。"
+          }
+        }
+      }
+    },
+    "There are no shortcuts to import from SPAi 3." : {
+      "comment" : "Alert: the old version's settings contain no script shortcuts that can be imported",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPAi 3のショートカット設定に、読み込めるショートカットがありません。"
+          }
+        }
+      }
+    },
+    "This is the current shortcut" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在の割当です"
+          }
+        }
+      }
+    },
+    "This key is assigned to “%@”" : {
+      "comment" : "Import sheet: conflict row; %@ = script file name",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このキーは「%@」に割当済み"
+          }
+        }
+      }
+    },
+    "Trash" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゴミ箱"
+          }
+        }
+      }
+    },
+    "Type Shortcut" : {
+      "comment" : "Settings > Built-in Shortcuts: key field while recording",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キーを入力"
+          }
+        }
+      }
+    },
+    "Use these to move your script shortcuts to another Mac." : {
+      "comment" : "Settings window, Shortcuts tab: note under the export/import buttons",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "別のMacへ登録したショートカットを移すときに使います。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

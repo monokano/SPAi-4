@@ -61,13 +61,13 @@ enum AppTranslocation {
         switch originalInApplications {
         case true?:
             title = String(localized: "Move SPAi 4 again in the Finder")
-            action = String(localized: "SPAi 4 is in the Applications folder, but it was placed there without being moved in the Finder, for example by unzipping it there. Quit SPAi 4, move it to the Desktop in the Finder, move it back to the Applications folder, and then open it again.")
+            action = String(localized: "SPAi 4 is in the Applications folder, but it was moved there in a way that doesn't meet Apple's requirements. Quit SPAi 4, move it to the Desktop in the Finder, move it back to the Applications folder, and then open it again. Also, make sure to move it by itself, not together with other apps.")
         case false?:
             title = String(localized: "Move SPAi 4 to the Applications folder")
-            action = String(localized: "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again.")
+            action = String(localized: "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again. Also, make sure to move it by itself, not together with other apps.")
         case nil:
             title = String(localized: "Move SPAi 4 to the Applications folder")
-            action = String(localized: "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again. If it's already in the Applications folder, move it to the Desktop and back again in the Finder.")
+            action = String(localized: "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again. If it's already in the Applications folder, move it to the Desktop and back again in the Finder. Also, make sure to move it by itself, not together with other apps.")
         }
 
         let alert = NSAlert()

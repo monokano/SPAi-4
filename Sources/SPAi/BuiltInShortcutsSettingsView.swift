@@ -179,6 +179,10 @@ final class BuiltInShortcutsModel: ObservableObject {
         }
 
         let shortcut = ScriptShortcut(keyCode: keyCode, modifiers: mods)
+        guard !KeyDisplay.isSystemReserved(shortcut) else {   // ⌘⌥Esc／⌘⌥⇧Esc（強制終了。2026-11-23）
+            hint = String(localized: "\(shortcut.display) is reserved by macOS and cannot be assigned")
+            return
+        }
         stopRecording()
         guard shortcut != shortcuts[action] else { return }   // いまと同じキー
 

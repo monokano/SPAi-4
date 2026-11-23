@@ -79,6 +79,17 @@
         }
       }
     },
+    "%@ is reserved by macOS and cannot be assigned" : {
+      "comment" : "Shortcut recorders: the key is used by macOS (Force Quit) (%@ = key)",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ はmacOSが使用しているため割り当てられません"
+          }
+        }
+      }
+    },
     "%@ is used by a built-in shortcut and cannot be assigned" : {
       "comment" : "Script shortcut recorder: the key is used by a built-in shortcut (%@ = key)",
       "localizations" : {
@@ -541,6 +552,17 @@
         }
       }
     },
+    "Esc will no longer work in Illustrator." : {
+      "comment" : "Script shortcut recorder: warning when Esc without modifiers is chosen",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IllustratorでEscが使えなくなります。"
+          }
+        }
+      }
+    },
     "Export…" : {
       "comment" : "Settings > Shortcuts: export button",
       "localizations" : {
@@ -696,6 +718,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "読み込む…"
+          }
+        }
+      }
+    },
+    "Include at least one of ⌘ ⌥ ⌃ (F1–F20 and Esc may be used alone)" : {
+      "comment" : "Script shortcut recorder: modifier missing",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ ⌥ ⌃のいずれかを含めてください（F1〜F20とEscは単独可）"
           }
         }
       }
@@ -955,6 +988,17 @@
         }
       }
     },
+    "Press a key with modifiers (F1–F20 and Esc may be used alone)" : {
+      "comment" : "Script shortcut recorder: initial instruction",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "修飾キー＋キーを押してください（F1〜F20とEscは単独可）"
+          }
+        }
+      }
+    },
     "Press a key with modifiers (F1–F20 may be used alone)" : {
       "localizations" : {
         "ja" : {
@@ -986,24 +1030,24 @@
         }
       }
     },
-    "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again." : {
+    "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again. Also, make sure to move it by itself, not together with other apps." : {
       "comment" : "Translocation alert body, 3rd paragraph (original location outside the Applications folder)",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SPAi 4を終了し、Finderでアプリケーションフォルダへ移動してから、もう一度開いてください。"
+            "value" : "SPAi 4を終了し、Finderでアプリケーションフォルダへ移動してから、もう一度開いてください。さらに、ほかのアプリと一緒ではなく、1つずつ移動することにも注意してください。"
           }
         }
       }
     },
-    "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again. If it's already in the Applications folder, move it to the Desktop and back again in the Finder." : {
+    "Quit SPAi 4, move it to the Applications folder in the Finder, and then open it again. If it's already in the Applications folder, move it to the Desktop and back again in the Finder. Also, make sure to move it by itself, not together with other apps." : {
       "comment" : "Translocation alert body, 3rd paragraph (original location unknown)",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SPAi 4を終了し、Finderでアプリケーションフォルダへ移動してから、もう一度開いてください。すでにアプリケーションフォルダにある場合は、Finderでいったんデスクトップへ移動してから戻してください。"
+            "value" : "SPAi 4を終了し、Finderでアプリケーションフォルダへ移動してから、もう一度開いてください。すでにアプリケーションフォルダにある場合は、Finderでいったんデスクトップへ移動してから戻してください。さらに、ほかのアプリと一緒ではなく、1つずつ移動することにも注意してください。"
           }
         }
       }
@@ -1257,13 +1301,13 @@
         }
       }
     },
-    "SPAi 4 is in the Applications folder, but it was placed there without being moved in the Finder, for example by unzipping it there. Quit SPAi 4, move it to the Desktop in the Finder, move it back to the Applications folder, and then open it again." : {
+    "SPAi 4 is in the Applications folder, but it was moved there in a way that doesn't meet Apple's requirements. Quit SPAi 4, move it to the Desktop in the Finder, move it back to the Applications folder, and then open it again. Also, make sure to move it by itself, not together with other apps." : {
       "comment" : "Translocation alert body, 3rd paragraph (original location inside the Applications folder)",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SPAi 4はアプリケーションフォルダにありますが、そこでZIPを展開した場合など、Finderで移動せずに置かれています。SPAi 4を終了し、Finderでいったんデスクトップへ移動してからアプリケーションフォルダへ戻し、もう一度開いてください。"
+            "value" : "SPAi 4はアプリケーションフォルダにありますが、Appleの条件を満たさない方法で移動されています。SPAi 4を終了し、Finderでいったんデスクトップへ移動してからアプリケーションフォルダへ戻し、もう一度開いてください。さらに、ほかのアプリと一緒ではなく、1つずつ移動することにも注意してください。"
           }
         }
       }

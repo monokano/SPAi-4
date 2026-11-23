@@ -106,7 +106,8 @@ nonisolated enum ShortcutTransfer {
         for (i, e) in file.shortcuts.enumerated() {
             let shortcut = ScriptShortcut(keyCode: e.keyCode, modifiers: e.modifiers)
             // 予約キー（⇧⌘Space／⇧⌥⌘Space）は手で書き換えたファイルでもない限り来ないが、念のため除外。
-            guard !ShortcutRecorderController.isReserved(shortcut) else { continue }
+            guard !ShortcutRecorderController.isReserved(shortcut),
+                  !KeyDisplay.isSystemReserved(shortcut) else { continue }   // ⌘⌥Esc／⌘⌥⇧Esc（2026-11-23）
             let rel = e.path.split(separator: "/").map(String.init)
             guard !rel.isEmpty, !rel.contains("..") else { continue }
 
@@ -235,7 +236,10 @@ extension ShortcutTransfer {
         if parts[0].contains("⇧") { modifiers |= shiftKey }
         let shortcut = ScriptShortcut(keyCode: UInt32(keyCode), modifiers: UInt32(modifiers))
         let hasRequired = modifiers & (cmdKey | optionKey | controlKey) != 0
-        guard hasRequired || KeyDisplay.functionKeyCodes.contains(shortcut.keyCode),
+        // F キーと Esc は単独可（記録画面と同じ規則。Esc は 2026-11-23）。⌘⌥Esc／⌘⌥⇧Esc（強制終了）は不可。
+        guard hasRequired || KeyDisplay.functionKeyCodes.contains(shortcut.keyCode)
+                || shortcut.keyCode == KeyDisplay.escapeKeyCode,
+              !KeyDisplay.isSystemReserved(shortcut),
               !ShortcutRecorderController.isReserved(shortcut) else { return nil }
         return shortcut
     }

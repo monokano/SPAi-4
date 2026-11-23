@@ -226,6 +226,22 @@ nonisolated enum KeyDisplay {
         106, 64, 79, 80, 90,                      // F16〜F20
     ]
 
+    /// Esc のキーコード。スクリプトの割当では修飾キーなしでも許可する（2026-11-23 ユーザー指定）。
+    /// 単独の Esc を割り当てると Illustrator で Esc が使えなくなるので、記録画面で警告する。
+    static let escapeKeyCode: UInt32 = 53
+
+    /// 修飾なしの Esc か（記録画面の警告・SPAi のウインドウが key の間の登録除外に使う）。
+    static func isPlainEscape(_ s: ScriptShortcut) -> Bool {
+        s.keyCode == escapeKeyCode && s.modifiers == 0
+    }
+
+    /// macOS が使っているキー：⌘⌥Esc＝強制終了ウインドウ／⌘⌥⇧Esc＝最前面アプリの強制終了。割り当てない。
+    static func isSystemReserved(_ s: ScriptShortcut) -> Bool {
+        let forceQuit = UInt32(cmdKey | optionKey)
+        return s.keyCode == escapeKeyCode
+            && (s.modifiers == forceQuit || s.modifiers == forceQuit | UInt32(shiftKey))
+    }
+
     /// テンキーの数字 → 上段の数字（0〜9）。ほかのテンキー（+ * Enter 等）は別のキーのまま。
     private static let keypadToMainRow: [UInt32: UInt32] = [
         UInt32(kVK_ANSI_Keypad0): UInt32(kVK_ANSI_0), UInt32(kVK_ANSI_Keypad1): UInt32(kVK_ANSI_1),

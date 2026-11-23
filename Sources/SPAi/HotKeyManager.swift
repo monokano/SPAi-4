@@ -36,6 +36,11 @@ final class HotKeyManager {
     private var includesPaste = false
     private static let userIDBase: UInt32 = 1000
 
+    /// SPAi 自身のウインドウ（検索パレット・アラート・設定など）が key の間は true。修飾なしの Esc の割当を登録しない
+    /// （登録したままだと、パレットを閉じる・アラートを取り消すための Esc がスクリプトの実行に化ける。2026-11-23）。
+    private var appWindowIsKey = false
+    private var keyWindowObservers: [NSObjectProtocol] = []
+
     /// 組み込みショートカットの id。1 はテストキー（⌃⌥⌘T）が使っていた（2026-10-21 削除）。
     private static let builtInIDs: [BuiltInAction: UInt32] = [
         .togglePanel: 2, .searchPalette: 3, .cleanPaste: 4, .cleanPasteTrim: 5,
@@ -48,6 +53,8 @@ final class HotKeyManager {
         isActive = true
         includesPaste = includePaste
         installHandlerIfNeeded()
+        watchKeyWindowIfNeeded()
+        appWindowIsKey = NSApp.keyWindow != nil
         for (action, shortcut) in builtIns.sorted(by: { $0.key.rawValue < $1.key.rawValue })
         where includePaste || !action.needsIllustratorFrontmost {
             guard let id = Self.builtInIDs[action] else { continue }
@@ -80,6 +87,7 @@ final class HotKeyManager {
     private func registerUserShortcuts() {
         idToPath.removeAll()
         for (i, entry) in userShortcuts.enumerated() {
+            if appWindowIsKey, KeyDisplay.isPlainEscape(entry.shortcut) { continue }
             let id = Self.userIDBase + UInt32(i)
             idToPath[id] = entry.path
             registerWithKeypad(entry.shortcut, rawID: id)
@@ -104,6 +112,29 @@ final class HotKeyManager {
         } else {
             // 他アプリ/システムが同じキーを既に確保していると失敗し得る。
             NSLog("[SPAi] RegisterEventHotKey(id=%u) failed: %d", rawID, status)
+        }
+    }
+
+    /// SPAi のウインドウが key になった／外れたら、修飾なしの Esc の割当だけを付け外しする（全体を登録し直す）。
+    /// key の移り変わり（A が外れて B が key になる）の途中を拾わないよう、判定は次のループで行う。
+    private func watchKeyWindowIfNeeded() {
+        guard keyWindowObservers.isEmpty else { return }
+        let center = NotificationCenter.default
+        for name in [NSWindow.didBecomeKeyNotification, NSWindow.didResignKeyNotification] {
+            keyWindowObservers.append(center.addObserver(forName: name, object: nil, queue: .main) { [weak self] _ in
+                DispatchQueue.main.async {
+                    MainActor.assumeIsolated { self?.keyWindowChanged() }
+                }
+            })
+        }
+    }
+
+    private func keyWindowChanged() {
+        let isKey = NSApp.keyWindow != nil
+        guard isKey != appWindowIsKey else { return }
+        appWindowIsKey = isKey
+        if isActive, userShortcuts.contains(where: { KeyDisplay.isPlainEscape($0.shortcut) }) {
+            activate(includePaste: includesPaste)
         }
     }
 

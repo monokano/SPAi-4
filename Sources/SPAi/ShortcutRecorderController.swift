@@ -58,6 +58,9 @@ final class ShortcutRecorderViewModel: ObservableObject {
 
     var isConflict: Bool { conflict != nil }
 
+    /// 表示中のキー（候補、無ければ既存割当）が修飾なしの Esc＝「Illustrator で Esc が使えなくなる」警告を出す（2026-11-23）。
+    @Published var plainEscapeWarning = false
+
     /// 案内の文言。キーは一覧の強調行で分かるので文には出さない（2026-10-23 ユーザー指定の文面）。
     var relatedNotes: [String] {
         var notes: [String] = []
@@ -173,9 +176,10 @@ final class ShortcutRecorderController: NSObject, NSWindowDelegate {
         vm.scriptKind = item.kind
         vm.comboLabel = current?.display ?? ShortcutRecorderViewModel.unassignedLabel
         vm.liveModifiers = ""
-        vm.message = String(localized: "Press a key with modifiers (F1–F20 may be used alone)")
+        vm.message = String(localized: "Press a key with modifiers (F1–F20 and Esc may be used alone)")
         vm.canRegister = false
         vm.hasCurrent = current != nil
+        updatePlainEscapeWarning()
         panel.setFrame(Self.overlayScreen(near: frame), display: true)
         installMonitors()
         panel.alphaValue = 0
@@ -239,32 +243,33 @@ final class ShortcutRecorderController: NSObject, NSWindowDelegate {
         let mods = KeyDisplay.carbonModifiers(from: event.modifierFlags)
         let keyCode = UInt32(event.keyCode)
 
-        if keyCode == 53 {                                 // Esc → キャンセル
-            finish(.cancelled)
-            return
-        }
+        // Esc はキャンセルにしない（修飾の有無を問わずキーとして記録できる。2026-11-23 ユーザー指定）。
+        // キャンセルは「キャンセル」ボタン・グレー部分のクリック・他アプリへの切替で行う。
         if (keyCode == 36 || keyCode == 76), mods == 0 {   // 修飾なし Return → 候補を確定
             confirmPending()
             return
         }
         if (keyCode == 51 || keyCode == 117), mods == 0 {  // 修飾なし Delete → 候補を取り消し
-            pendingShortcut = nil
-            vm.comboLabel = currentShortcut?.display ?? ShortcutRecorderViewModel.unassignedLabel
-            vm.canRegister = false
-            vm.conflict = nil
-            vm.message = String(localized: "Press a key with modifiers (F1–F20 may be used alone)")
+            clearPending()
+            vm.message = String(localized: "Press a key with modifiers (F1–F20 and Esc may be used alone)")
             return
         }
 
-        // F キー以外は ⌘⌥⌃ のいずれか必須（⇧単独や無修飾は通常入力と衝突するため不可）。
+        // F キー・Esc 以外は ⌘⌥⌃ のいずれか必須（⇧単独や無修飾は通常入力と衝突するため不可）。
         let hasHardModifier = mods & UInt32(cmdKey | optionKey | controlKey) != 0
-        guard hasHardModifier || KeyDisplay.functionKeyCodes.contains(keyCode) else {
+        guard hasHardModifier || KeyDisplay.functionKeyCodes.contains(keyCode)
+                || keyCode == KeyDisplay.escapeKeyCode else {
             clearPending()
-            vm.message = String(localized: "Include at least one of ⌘ ⌥ ⌃ (F1–F20 may be used alone)")
+            vm.message = String(localized: "Include at least one of ⌘ ⌥ ⌃ (F1–F20 and Esc may be used alone)")
             return
         }
 
         let shortcut = ScriptShortcut(keyCode: keyCode, modifiers: mods)
+        guard !KeyDisplay.isSystemReserved(shortcut) else {   // ⌘⌥Esc／⌘⌥⇧Esc（強制終了）
+            clearPending()
+            vm.message = String(localized: "\(shortcut.display) is reserved by macOS and cannot be assigned")
+            return
+        }
         guard !Self.isReserved(shortcut) else {
             clearPending()
             vm.message = String(localized: "\(shortcut.display) is used by a built-in shortcut and cannot be assigned")
@@ -280,6 +285,7 @@ final class ShortcutRecorderController: NSObject, NSWindowDelegate {
         // いまの割当と同じキー：登録しても何も変わらないので確定させない。
         if shortcut == currentShortcut {
             pendingShortcut = nil
+            updatePlainEscapeWarning()
             vm.canRegister = false
             vm.conflict = nil
             vm.message = String(localized: "This is the current shortcut")
@@ -287,6 +293,7 @@ final class ShortcutRecorderController: NSObject, NSWindowDelegate {
         }
 
         pendingShortcut = shortcut
+        updatePlainEscapeWarning()
         vm.canRegister = true
         // 他スクリプトに割当済み：警告し、ボタンを「置き換える」にする（確定すると相手の割当は外れる＝後勝ち）。
         // 相手の名前は一覧の強調行で分かるので、警告文には出さない（2026-10-21 ユーザー指定の文面）。
@@ -306,6 +313,12 @@ final class ShortcutRecorderController: NSObject, NSWindowDelegate {
         vm.comboLabel = currentShortcut?.display ?? ShortcutRecorderViewModel.unassignedLabel
         vm.canRegister = false
         vm.conflict = nil
+        updatePlainEscapeWarning()
+    }
+
+    /// 修飾なしの Esc を表示中なら警告を出す（候補が無ければ既存割当で判定＝Esc 割当済みのスクリプトを開いたときも出す）。
+    private func updatePlainEscapeWarning() {
+        vm.plainEscapeWarning = (pendingShortcut ?? currentShortcut).map(KeyDisplay.isPlainEscape) ?? false
     }
 
     /// 組み込みショートカット（パネル・検索・クリーンペースト。設定で変えたキー）が使っているキー。スクリプトには割り当てない
@@ -395,6 +408,11 @@ struct ShortcutRecorderView: View {
                     .foregroundColor(Color.primary.opacity(0.75))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
+            }
+
+            // 修飾なしの Esc の警告。重複の警告と同じ帯（2026-11-23 ユーザー指定）。
+            if vm.plainEscapeWarning {
+                noticeBand(String(localized: "Esc will no longer work in Illustrator."))
             }
 
             // 元ファイル／エイリアスの割当の案内。重複の警告と同じ帯で示し、一覧の該当行も強調する（2026-10-23）。

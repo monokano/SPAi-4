@@ -7,6 +7,7 @@ macOS用デスクトップアプリ
 ## ダウンロード
 
 [SPAi-401.zip](https://github.com/monokano/SPAi-4/releases/download/4.0.1/SPAi-401.zip)
+<br>[更新内容](https://github.com/monokano/SPAi-4/releases)
 
 ## 用途
 

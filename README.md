@@ -4,6 +4,10 @@
 
 macOS用デスクトップアプリ
 
+## ダウンロード
+
+[SPAi-401.zip](https://github.com/monokano/SPAi-4/releases/download/4.0.1/SPAi-401.zip)
+
 ## 用途
 
 SPAi 4は、Adobe Illustratorのスクリプトを実行するためのスクリプトパネルです。

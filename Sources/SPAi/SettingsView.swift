@@ -104,6 +104,7 @@ struct ShortcutsSettingsPage: View {
 /// 「Illustrator が最前面にあるときだけパネルを表示」も一度ここへ移したが、同日ユーザー指定で「ログイン時に起動」の上へ戻した）。
 /// 2026-11-15 の4タブ化で「パネル」タブの唯一のカードになったので見出しを外し（タブ名と重なる）、
 /// 「Illustrator が最前面にあるときだけパネルを表示」を先頭に置いた（いつ出るか → 見え方 → 操作の順。ユーザー確定）。
+/// 2026-11-28 ユーザー指定で見出し「スクリプトパネル」を戻した（スクリプトパネルの設定であることを明示する）。
 struct PanelSettingsView: View {
     @AppStorage(Prefs.onlyWithIllustratorKey) private var onlyWithIllustrator = true
     @AppStorage(Prefs.listTextSizeKey) private var rawTextSize: String = ListTextSize.medium.rawValue
@@ -111,7 +112,7 @@ struct PanelSettingsView: View {
     @AppStorage(Prefs.sortPanelShortcutsByKeyKey) private var sortByKey = true
 
     var body: some View {
-        Section {
+        Section("Script Panel") {
             // 2026-10-21 にメニューバーのメニューから設定へ移設。2026-11-15 に「一般」からここへ
             Toggle("Show Panel Only When Illustrator Is Frontmost", isOn: $onlyWithIllustrator)
                 .onChange(of: onlyWithIllustrator) { _ in

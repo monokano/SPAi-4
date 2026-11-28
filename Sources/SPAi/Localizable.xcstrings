@@ -591,7 +591,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "フォルダ"
+            "value" : "登録"
           }
         }
       }
@@ -1150,6 +1150,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "サンプル_バージョン表示"
+          }
+        }
+      }
+    },
+    "Script Panel" : {
+      "comment" : "Settings window: section header of the Panel tab",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリプトパネル"
           }
         }
       }

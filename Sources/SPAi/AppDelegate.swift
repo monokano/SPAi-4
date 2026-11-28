@@ -817,17 +817,21 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             shortcuts.sizingOptions = [.preferredContentSize]
             let tabs = NSTabViewController()
             tabs.tabStyle = .toolbar
-            let pages: [(NSViewController, String, String)] = [
-                (general, String(localized: "General"), "gearshape"),
-                (folders, String(localized: "Folders"), "folder"),
-                (panel, String(localized: "Panel"), "sidebar.left"),
-                (shortcuts, String(localized: "Shortcuts"), "keyboard"),
+            // 並びは「一般」「パネル」「登録」「ショートカット」（2026-11-28 ユーザー指定で「パネル」を「一般」の右へ。
+            // 「フォルダ」タブは同日に ja 表記を「登録」・アイコンを plus.app に変更＝英語は Folders のまま）。
+            // 「パネル」のアイコンだけ自前の SVG（Assets の `PanelTabIcon`＝テンプレート画像・高さ 22pt）。
+            let pages: [(NSViewController, String, NSImage?)] = [
+                (general, String(localized: "General"), NSImage(systemSymbolName: "gearshape", accessibilityDescription: nil)),
+                (panel, String(localized: "Panel"), Self.panelTabIcon()),
+                (folders, String(localized: "Folders"), NSImage(systemSymbolName: "plus.app", accessibilityDescription: nil)),
+                (shortcuts, String(localized: "Shortcuts"), NSImage(systemSymbolName: "keyboard", accessibilityDescription: nil)),
             ]
-            for (vc, title, symbol) in pages {
+            for (vc, title, image) in pages {
                 vc.title = title
                 let item = NSTabViewItem(viewController: vc)
                 item.label = title
-                item.image = NSImage(systemSymbolName: symbol, accessibilityDescription: title)
+                image?.accessibilityDescription = title
+                item.image = image
                 tabs.addTabViewItem(item)
             }
             let window = NSWindow(contentViewController: tabs)
@@ -840,6 +844,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // 窓は使い回すので、開くたびに外部で変わり得る状態（ログイン項目）を読み直させる
         NotificationCenter.default.post(name: .settingsWindowWillShow, object: nil)
         if let window = settingsWindow { bringToFront(window) }
+    }
+
+    /// 設定「パネル」タブのアイコン。SVG（縦長 82.13×104.69）を縦横比を保って高さ 22pt で描く。
+    /// ⚠️ ツールバーは SF Symbols 以外の画像を約 32pt の枠いっぱいに拡大する（`size` を 22pt にしても
+    /// 実測 31pt になりラベルにかぶった）。そこで 32pt 四方の透明な画像の中央に 22pt で描いて渡す
+    /// （オフスクリーン描画の実測で高さ 22pt・歯車アイコンと同じ縦位置＝2026-11-28）。
+    private static func panelTabIcon() -> NSImage? {
+        guard let source = NSImage(named: "PanelTabIcon") else { return nil }
+        let slot: CGFloat = 32, height: CGFloat = 22
+        let aspect = source.size.height > 0 ? source.size.width / source.size.height : 82.13 / 104.69
+        let width = height * aspect
+        let image = NSImage(size: NSSize(width: slot, height: slot), flipped: false) { _ in
+            source.draw(in: NSRect(x: (slot - width) / 2, y: (slot - height) / 2, width: width, height: height))
+            return true
+        }
+        image.isTemplate = true
+        return image
     }
 
     /// ウィンドウ位置を記憶する。`name` でフレームを自動保存し、保存済みがあれば復元、なければ中央に置く。

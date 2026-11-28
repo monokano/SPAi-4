@@ -6,7 +6,7 @@ macOS用デスクトップアプリ
 
 ## ダウンロード
 
-[SPAi-401.zip](https://github.com/monokano/SPAi-4/releases/download/4.0.1/SPAi-401.zip)
+[SPAi-402.zip](https://github.com/monokano/SPAi-4/releases/download/4.0.2/SPAi-402.zip)
 <br>[更新内容](https://github.com/monokano/SPAi-4/releases)
 
 ## 用途
@@ -32,11 +32,11 @@ SPAi 4は、Adobe Illustratorのスクリプトを実行するためのスクリ
 	- スクリプトに登録したショートカットを押す
 	- 検索パレットでスクリプトの名前を入力し、Returnを押す
 
-詳細は、SPAi 4のヘルプメニューから「SPAi 4 ヘルプ」を選択してください。
+詳細は、SPAi 4のヘルプを参照してください。
 
 ## 動作環境
 
-macOS 13.5 Ventura以降（Universal Binary）
+macOS 13.5 Ventura 以降（Universal Binary）
 
 ## ライセンス
 
